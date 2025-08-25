@@ -1,8 +1,8 @@
-Clone da Página do YouTube
+Clonando Página do Youtube
 
 Projeto desenvolvido como parte do Desafio Flexbox - DIO, com o objetivo de praticar HTML5 e CSS3 utilizando Flexbox para estruturar e estilizar a interface.
 
-🖼️ Preview
+Preview 
 
 <img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/41790786-bd3b-4b26-923e-4b6c3645ea18" />
 
@@ -36,7 +36,7 @@ Praticar o uso de Flexbox para construir layouts responsivos e semelhantes a apl
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/youtube-clone.git
+´´git clone https://github.com/seu-usuario/youtube-clone.git´´
 
 
 Abra o arquivo index.html no navegador.
