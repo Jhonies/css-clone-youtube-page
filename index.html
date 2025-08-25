@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YouTube (Layout Flexbox - DIO)</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <button class="icon-btn" aria-label="Menu">
+          <!-- Ícone hamburger -->
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+          </svg>
+        </button>
+        <a href="#" class="brand" aria-label="YouTube Home">
+          <svg width="120" height="30" viewBox="0 0 90 20" aria-hidden="true" focusable="false" class="brand__logo">
+            <rect x="0" y="2" width="28" height="18" rx="4" ry="4"></rect>
+            <polygon points="11,7 20,10 11,15" fill="#fff"></polygon>
+          </svg>
+          <span class="brand__text"><strong>YouTube</strong></span>
+        </a>
+      </div>
+      <div class="header__center">
+        <form class="search" role="search" aria-label="Pesquisar vídeos">
+          <label class="sr-only" for="search-input">Pesquisar</label>
+          <input id="search-input" class="search__input" type="text" placeholder="Pesquisar" />
+          <button type="submit" class="search__btn" aria-label="Buscar">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5 1.5-1.5-5-5zM9.5 14C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
+            </svg>
+          </button>
+          <button type="button" class="icon-btn search__voice" aria-label="Pesquisa por voz">
+            <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 14a3 3 0 003-3V7a3 3 0 10-6 0v4a3 3 0 003 3zm5-3a5 5 0 01-10 0H5a7 7 0 0014 0h-2zM11 19h2v3h-2z"></path>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <div class="header__right">
+        <button class="icon-btn" aria-label="Criar">
+          <svg width="24" height="24" viewBox="0 0 24 20" aria-hidden="true" focusable="false">
+            <path d="M19 3H5a2 2 0 00-2 2v14l4-4h12a2 2 0 002-2V5a2 2 0 00-2-2z"></path>
+          </svg>
+        </button>
+        <button class="icon-btn" aria-label="Notificações">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V11a6 6 0 10-12 0v5l-2 2v1h16v-1l-2-2z"></path>
+          </svg>
+        </button>
+        <button class="avatar" aria-label="Abrir perfil">
+          <img src="assets/img/jhonies-pfp.jpg" alt="Seu avatar" />
+        </button>
+      </div>
+    </header>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="layout">
+      <!-- COLUNA ESQUERDA: VÍDEO E DETALHES -->
+      <section class="video-area" aria-labelledby="video-title">
+        <div class="player">
+          <iframe class="player__iframe" width="100%" height="315" src="https://www.youtube.com/embed/YRolwGSte9g?si=ju3_qnJujJZGiT7h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h1 id="video-title" class="video__title">Dominando Display Flex (Flexbox) | Guia para iniciantes</h1>
+
+        <div class="video__meta">
+          <span class="video__views">1.2 mi de visualizações</span>
+          <span class="dot" aria-hidden="true">•</span>
+          <time class="video__date" datetime="2025-08-10">há 2 semanas</time>
+        </div>
+
+        <div class="video__actions">
+          <div class="channel">
+            <img class="channel__avatar" src="https://yt3.ggpht.com/mc1MPwCGHyMq-ck-2mRB020qAWCtvZNId8tCGsPM9SkFdSCkHYLh5f0G-n04nGhdvXUd7Hj-iw=s88-c-k-c0x00ffffff-no-rj" alt="Avatar do canal" />
+            <div class="channel__info">
+              <a href="#" class="channel__name">DevClub</a>
+              <span class="channel__subs">180 mil inscritos</span>
+            </div>
+            <button class="btn btn--primary">Inscrever-se</button>
+          </div>
+
+          <div class="actions">
+            <button class="action-btn" aria-label="Gostei">
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 21h4V9H1v12zM23 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32a1 1 0 00-.29-.7L14 1 7.59 7.41A2 2 0 007 8.83V19a2 2 0 002 2h9a2 2 0 002-2l2-7v-2z"/></svg>
+              <span>3,8 mil</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3h-4v12h4V3zM1 14c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .26.11.52.29.7L10 23l6.41-6.41c.38-.38.59-.89.59-1.41V5a2 2 0 00-2-2H6a2 2 0 00-2 2L2 12v2z"/></svg>
+              <span></span>
+            </button>
+            <button class="action-btn" aria-label="Compartilhar">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a2.48 2.48 0 000-1.39l7-4.11A2.99 2.99 0 0018 7.91c1.66 0 3-1.34 3-3S19.66 2 18 2s-3 1.34-3 3c0 .23.03.45.08.66l-7 4.11A3 3 0 006 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.9 0 1.7-.39 2.25-1l7.11 4.18c-.05.2-.08.41-.08.62 0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3z"/></svg>
+              <span>Compartilhar</span>
+            </button>
+            <button class="action-btn" aria-label="Download">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h14v-2H5v2zM5 4v6h4l-5 5-5-5h4V4h2zM20 4h-6v2h6v14h2V6a2 2 0 00-2-2z"/></svg>
+              <span>Download</span>
+            </button>
+            <button class="more__action-btn" aria-label="Mais opções">
+              <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+              <span></span>
+            </button>
+          </div>
+        </div>
+
+        <details class="video__description" open>
+          <summary class="video__description-title">Descrição</summary>
+          <p>
+            Você quer entender e dominar o Display Flex em seus projetos? Vou te mostrar a solução perfeita! No vídeo de hoje: "Dominando Display Flex | Guia para iniciantes", vou trazer um guia completo para iniciantes que querem dominar o uso do Display Flex no CSS e transformar a maneira como criam layouts.
+
+O Display Flex é uma ferramenta essencial para qualquer desenvolvedor que busca criar layouts responsivos e eficientes no CSS. Ele facilita a organização dos elementos na página, permitindo criar designs flexíveis e dinâmicos com facilidade. Com uma explicação simples e um passo a passo detalhado, você pode começar a utilizar essa poderosa técnica imediatamente.
+
+Neste tutorial, você verá um guia completo de como utilizar o Display Flex em seus projetos. Aprenda como essa técnica pode transformar seu workflow de desenvolvimento, tornando mais ágil e menos frustrante. Desde a criação de um layout básico até a configuração avançada do Display Flex, todas as etapas são explicadas detalhadamente para garantir que você possa aproveitar ao máximo essa ferramenta incrível.
+
+Assista ao vídeo e descubra como o Display Flex pode melhorar significativamente a maneira como você cria layouts. Não perca mais tempo com configurações complicadas e aproveite todos os benefícios que essa técnica tem a oferecer.
+
+          </p>
+          <ul>
+            <li>Header com busca e ações</li>
+            <li>Player responsivo (16:9)</li>
+            <li>Barra lateral com recomendações</li>
+          </ul>
+        </details>
+      </section>
+
+      <!-- COLUNA DIREITA: RECOMENDADOS -->
+      <aside class="sidebar" aria-label="Vídeos recomendados">
+        <ul class="recs">
+          <!-- Item de recomendado -->
+          <li class="rec-card">
+            <a class="rec-card__thumb" href="#" aria-label="Assistir Guia Completo para Iniciantes em CSS">
+              <img src="https://i.ytimg.com/vi/Z4CbaGCEsTY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAIsOMxYHVo0wPNF-pcTJMgYbqHTg" alt="Miniatura do vídeo" />
+              <span class="rec-card__duration">19:14</span>
+            </a>
+            <div class="rec-card__info">
+              <a href="#" class="rec-card__title">FLEXBOX: Guia Completo para Iniciantes em CSS</a>
+              <a href="#" class="rec-card__channel">Larissa Kich</a>
+              <div class="rec-card__meta">44 mil visualizações • há 1 ano</div>
+            </div>
+          </li>
+
+          <li class="rec-card">
+            <a class="rec-card__thumb" href="#" aria-label="Assistir Aprenda CSS Flexbox Em 30 Minutos">
+              <img src="https://i.ytimg.com/vi/0OWlr3D3wFA/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBmsFGITkJt3fKa891Kx_5LE43mrA" alt="Miniatura do vídeo" />
+              <span class="rec-card__duration">32:58</span>
+            </a>
+            <div class="rec-card__info">
+              <a href="#" class="rec-card__title">Aprenda CSS Flexbox Em 30 Minutos</a>
+              <a href="#" class="rec-card__channel">Felipe Rocha • Full Stack Club</a>
+              <div class="rec-card__meta">89 mil visualizações • há 3 semanas</div>
+            </div>
+          </li>
+
+          <li class="rec-card">
+            <a class="rec-card__thumb" href="#" aria-label="FLEXBOX CSS! Como posicionar elementos na página web">
+              <img src="https://i.ytimg.com/vi/KbjLtEgmZ_E/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB0Eh15oc4FXjvUDYFdqQqikIy5IA" alt="Miniatura do vídeo" />
+              <span class="rec-card__duration">22:10</span>
+            </a>
+            <div class="rec-card__info">
+              <a href="#" class="rec-card__title">FLEXBOX CSS! Como posicionar elementos na página web - parte 1</a>
+              <a href="#" class="rec-card__channel">Rafaella Ballerini</a>
+              <div class="rec-card__meta">206 mil visualizações • há 3 anos</div>
+            </div>
+          </li>
+
+          <li class="rec-card">
+            <a class="rec-card__thumb" href="#" aria-label="Assistir DESCOMPLICANDO o CSS Flexbox">
+              <img src="https://i.ytimg.com/vi/gOMK_xruAqc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLB4JP9rHohFIYZdd6qM925FEv83_w" alt="Miniatura do vídeo" />
+              <span class="rec-card__duration">33:30</span>
+            </a>
+            <div class="rec-card__info">
+              <a href="#" class="rec-card__title">DESCOMPLICANDO o CSS Flexbox 🤯</a>
+              <a href="#" class="rec-card__channel">Mayk Brito</a>
+              <div class="rec-card__meta">34 mil visualizações • há 2 anos</div>
+            </div>
+          </li>
+
+          <li class="rec-card">
+            <a class="rec-card__thumb" href="#" aria-label="Assistir Guia definitivo do CSS FLEXBOX">
+              <img src="https://i.ytimg.com/vi/sJn-XAlsuvY/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBlqFEr--rD5fvoSPt0-u0bwz2xgg" alt="Miniatura do vídeo" />
+              <span class="rec-card__duration">23:37</span>
+            </a>
+            <div class="rec-card__info">
+              <a href="#" class="rec-card__title">Guia definitivo do CSS FLEXBOX - Aprenda na prática</a>
+              <a href="#" class="rec-card__channel">Fernanda Kipper | Dev</a>
+              <div class="rec-card__meta">16 mil visualizações • há 2 anos</div>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- FOOTER SIMPLES -->
+    <footer class="footer">
+      <small>Feito para o <strong>Desafio Flexbox - DIO</strong>. Este é um layout de estudo e não afiliado ao YouTube.</small>
+    </footer>
+
+    <!-- Classes utilitárias de acessibilidade -->
+    <style>
+      .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    </style>
+  </body>
+</html>
