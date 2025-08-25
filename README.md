@@ -36,7 +36,7 @@ Praticar o uso de Flexbox para construir layouts responsivos e semelhantes a apl
 
 Clone o repositório:
 
-´´git clone https://github.com/seu-usuario/youtube-clone.git´´
+```git clone https://github.com/seu-usuario/youtube-clone.git```
 
 
 Abra o arquivo index.html no navegador.
