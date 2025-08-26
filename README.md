@@ -26,10 +26,15 @@ CSS3 (Flexbox)
 📌 Funcionalidades:
 
 ✅ Layout inspirado no YouTube
+
 ✅ Barra lateral com navegação
+
 ✅ Header com logo, busca e botões de ação
+
 ✅ Player de vídeo responsivo
+
 ✅ Lista de vídeos recomendados
+
 ✅ Responsividade mobile
 
 🎯 Objetivo:
