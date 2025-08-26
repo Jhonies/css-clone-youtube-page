@@ -6,7 +6,7 @@ Preview
 
 <img width="1919" height="944" alt="image" src="https://github.com/user-attachments/assets/41790786-bd3b-4b26-923e-4b6c3645ea18" />
 
-🚀 Tecnologias
+🚀 Tecnologias:
 
 HTML5
 
@@ -14,12 +14,16 @@ CSS3 (Flexbox)
 
 📂 Estrutura do Projeto
 📦 clone-yt-page
+
  ┣ 📜 index.html        # Estrutura HTML da página
+
  ┣ 📜 style.css         # Estilização com Flexbox
+
  ┗ 📜 README.md         # Documentação do projeto
+
  ┗ 📜 assets/images     # Imagens usadas localmente no projeto
 
-📌 Funcionalidades
+📌 Funcionalidades:
 
 ✅ Layout inspirado no YouTube
 ✅ Barra lateral com navegação
@@ -28,7 +32,7 @@ CSS3 (Flexbox)
 ✅ Lista de vídeos recomendados
 ✅ Responsividade mobile
 
-🎯 Objetivo
+🎯 Objetivo:
 
 Praticar o uso de Flexbox para construir layouts responsivos e semelhantes a aplicações reais.
 
@@ -41,7 +45,7 @@ Clone o repositório:
 
 Abra o arquivo index.html no navegador.
 
-📚 Aprendizados
+📚 Aprendizados:
 
 Durante o desenvolvimento, foi possível aprender:
 
